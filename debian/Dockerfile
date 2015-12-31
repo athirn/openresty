@@ -52,7 +52,7 @@ RUN cd /root \
 
 WORKDIR $NGINX_PREFIX/
 
-ONBUILD RUN rm -rf conf/* html/*
-ONBUILD COPY nginx $NGINX_PREFIX/
+#ONBUILD RUN rm -rf conf/* html/*
+#ONBUILD COPY nginx $NGINX_PREFIX/
 
 CMD ["nginx", "-g", "daemon off; error_log /dev/stderr info;"]
